@@ -1,0 +1,521 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+
+
+    <title>ABMEC</title>
+    <meta content="text/html" http-equiv="content/type" charset="windows-1251">
+	
+	<!-- стили слайдера-->
+	    <link rel="stylesheet" type="text/css" href="slider/css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="slider/css/style.css" />
+		
+	<!--Стили календаря-->
+        <link rel="stylesheet" type="text/css" media="all" href="calendar/jsDatePick_ltr.css" />	
+	
+	
+	<!--мои стили-->
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+	
+	
+	<!--библиотека jquery-->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	
+	
+	<!--скрипт прокрутка-->
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript">
+         $(document).ready(
+         function() {
+         $("html").niceScroll();
+		 $(".news").niceScroll();
+         }
+         );
+    </script>
+	
+	
+	
+	<!--Скрипт календаря-->
+	<script type="text/javascript" src="calendar/jsDatePick.full.1.3.js"></script>
+	<script type="text/javascript">
+	window.onload = function(){
+		
+		
+		g_globalObject = new JsDatePick({
+			useMode:1,
+			isStripped:true,
+			target:"div3_example"
+			/*selectedDate:{				This is an example of what the full configuration offers.
+				day:5,						For full documentation about these settings please see the full version of the code.
+				month:9,
+				year:2006
+			},
+			yearsRange:[1978,2020],
+			limitToToday:false,
+			cellColorScheme:"beige",
+			dateFormat:"%m-%d-%Y",
+			imgPath:"img/",
+			weekStartDay:1*/
+		});		
+		
+		g_globalObject.setOnSelectedDelegate(function(){
+			var obj = g_globalObject.getSelectedDay();
+			alert("a date was just selected and the date is : " + obj.day + "/" + obj.month + "/" + obj.year);
+			document.getElementById("div3_example_result").innerHTML = obj.day + "/" + obj.month + "/" + obj.year;
+		});
+		
+		
+		
+		g_globalObject2 = new JsDatePick({
+			useMode:1,
+			isStripped:false,
+			target:"div4_example",
+			cellColorScheme:"beige"
+			/*selectedDate:{				This is an example of what the full configuration offers.
+				day:5,						For full documentation about these settings please see the full version of the code.
+				month:9,
+				year:2006
+			},
+			yearsRange:[1978,2020],
+			limitToToday:false,
+			dateFormat:"%m-%d-%Y",
+			imgPath:"img/",
+			weekStartDay:1*/
+		});
+		
+		g_globalObject2.setOnSelectedDelegate(function(){
+			var obj = g_globalObject2.getSelectedDay();
+			alert("a date was just selected and the date is : " + obj.day + "/" + obj.month + "/" + obj.year);
+			document.getElementById("div3_example_result").innerHTML = obj.day + "/" + obj.month + "/" + obj.year;
+		});		
+		
+	};
+</script>
+	
+	
+	<!--скрипт слайдер-->
+	<script type="text/javascript" src="slider/js/jmpress.min.js"></script>
+	<script type="text/javascript" src="slider/js/jquery.jmslideshow.js"></script>
+	
+    <script type="text/javascript" src="js/modernizr.custom.48780.js"></script>
+		<noscript>
+			<style>
+			.step {
+				width: 100%;
+				position: relative;
+			}
+			.step:not(.active) {
+				opacity: 1;
+				filter: alpha(opacity=99);
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+			}
+			.step:not(.active) a.jms-link{
+				opacity: 1;
+				margin-top: 40px;
+			}
+			</style>
+		</noscript>
+       	
+</head>
+<body>
+
+
+    
+
+
+   <div class="main-block">
+   
+   
+   <div class="header">
+	     <span>The Association of British Mining Companies</span>
+		 <div class="lang engl"><a href="#">English</a></div>
+		 <div class="lang jap"> <a href="#">Japan</a></div>
+		 <div class="lang russ"><a href="#">Russian</a></div>
+		 <div class="lang espan"><a href="#">Espanol</a></div>
+		 <div class="lang germ"><a href="#">German</a></div>
+	  </div>
+   
+               
+	  <div class="map">
+	     <img src="images/logo_img.jpg">
+		 <div class="logo_text">
+		 <span>THE BRITISH VOICE OF</span>
+		       <hr color="#9e9e9e" size="1" width="270" align="left">
+		       <span>GLOBAL MINING EXCELLENCE</span>
+		 </div>
+	  </div>
+	  	  
+	  
+	  	  
+	  <div class="header_menu menu1">
+	     <ul>
+		    <li><a href="#">Home</a>
+			<li><a href="#">About ABMEC</a>
+			<li class="dot"><a href="#">Members</a>
+		 </ul>
+	  </div>
+	  
+	  <div class="header_menu menu2">
+	     <ul>
+		    <li><a href="#">News</a>
+			<li><a href="#">Contact Us</a>
+			<li class="dot"><input id="go" type="checkbox"/>
+              <label for="go" class="st">Members Login</label>
+            <div class="popup">
+			   <form>
+			      <input class="text" type="text" placeholder="Login" size="18"> 
+				  <input class="text" type="password" placeholder="Password" size="18"> 
+				  <input class="but" type="button" value="Login">
+				  <input class="but" type="button" value="Registration">
+				  <input class="check" type="checkbox" checked><span class="check_text">Remember me</span>
+			   </form>
+			   <img src="images/lock.png">
+			</div>
+		 </ul>
+	  </div>
+	  
+	   
+	   
+	  <div class="navigation"></div>
+	  
+    <div class="navigation_links">
+		    <img src="images/home.png">
+			<a href="#">Deeper menu</a>
+			<img src="images/arrow.png">
+			<a href="#">Deeper menu</a>
+			<img src="images/arrow.png">
+			<span>You here</span>
+		 </div>    
+	     	  
+	  <div class="slider">
+	      <div class="container">
+			
+			<section id="jms-slideshow" class="jms-slideshow">
+			
+				<div class="step">
+										
+				</div>
+				
+				<div class="step"  data-y="500" data-scale="0.4" data-rotate-x="30">
+										
+				</div>
+				
+				<div class="step"  data-x="2000" data-z="3000" data-rotate="170">
+										
+				</div>
+				
+				<div class="step"  data-x="3000">
+										
+				</div>
+				
+				<div class="step"  data-x="4500" data-z="1000" data-rotate-y="45">
+										
+				</div>
+				
+			</section>
+        </div>
+	  </div>
+	  
+	  
+	  
+	  
+	  <div class="line"></div>
+	  
+	  <div class="left-column">
+	  
+	    <div class="welcome">
+		   <img src="images/img1.jpg">
+		   <strong>WELCOME</strong>
+		   <p>The UK and International Mining Sectors have seen dramatic changes in recent times. British Equipment manufacturers have responded to these challenges by developing new and ever more inno vative solutions in the world of mineral extraction. The design and devel opment expertise of our member Companies both large and small featured in this web site is focused on making mining safer, more efficient and profitable throughout the world.</p>
+           <a href="#">More</a>		   
+           <div class="line1"></div> 
+		</div>
+		
+        <strong>NEWS</strong>
+
+        <div class="news">
+		
+		   <div class="new new1">
+		      <img src="images/img2.jpg">
+			  <div class="data">
+			     <img src="images/calendar.jpg">
+				 <span>12.07.15</span>
+			  </div>
+			  <strong>
+			      MRS appoints Wisam Farjow Vice
+                  President Engineering!
+			  </strong>
+			  <p>Mine Radio Systems (MRS); Global designer and manufacturer of communication systems to...</p>
+			  <a href="#">More</a>
+			  <div class="line2"></div>
+		   </div>
+		   
+		   <div class="new new2">
+		      <img src="images/img3.jpg">
+			  <div class="data">
+			     <img src="images/calendar.jpg">
+				 <span>12.07.15</span>
+			  </div>
+			  <strong>
+			      MRS appoints Wisam Farjow Vice
+                  President Engineering!
+			  </strong>
+			  <p>Mine Radio Systems (MRS); Global designer and manufacturer of communication systems to...</p>
+			  <a href="#">More</a>
+			  <div class="line2"></div>
+		   </div>
+		   
+		   <div class="new new3">
+		      <img src="images/img1.jpg">
+			  <div class="data">
+			     <img src="images/calendar.jpg">
+				 <span>12.07.15</span>
+			  </div>
+			  <strong>
+			      MRS appoints Wisam Farjow Vice
+                  President Engineering!
+			  </strong>
+			  <p>Mine Radio Systems (MRS); Global designer and manufacturer of communication systems to...</p>
+			  <a href="#">More</a>
+			  <div class="line2"></div>
+		   </div>
+		   
+		   <div class="new new1">
+		      <img src="images/img2.jpg">
+			  <div class="data">
+			     <img src="images/calendar.jpg">
+				 <span>12.07.15</span>
+			  </div>
+			  <strong>
+			      MRS appoints Wisam Farjow Vice
+                  President Engineering!
+			  </strong>
+			  <p>Mine Radio Systems (MRS); Global designer and manufacturer of communication systems to...</p>
+			  <a href="#">More</a>
+			  <div class="line2"></div>
+		   </div>
+		   
+		   <div class="new new2">
+		      <img src="images/img1.jpg">
+			  <div class="data">
+			     <img src="images/calendar.jpg">
+				 <span>12.07.15</span>
+			  </div>
+			  <strong>
+			      MRS appoints Wisam Farjow Vice
+                  President Engineering!
+			  </strong>
+			  <p>Mine Radio Systems (MRS); Global designer and manufacturer of communication systems to...</p>
+			  <a href="#">More</a>
+			  <div class="line2"></div>
+		   </div>
+		   
+		   <div class="new new3">
+		      <img src="images/img3.jpg">
+			  <div class="data">
+			     <img src="images/calendar.jpg">
+				 <span>12.07.15</span>
+			  </div>
+			  <strong>
+			      MRS appoints Wisam Farjow Vice
+                  President Engineering!
+			  </strong>
+			  <p>Mine Radio Systems (MRS); Global designer and manufacturer of communication systems to...</p>
+			  <a href="#">More</a>
+			  <div class="line2"></div>
+		   </div>
+		   
+		</div>   <!--end news-->
+
+        <strong>MEMBERS NEWS</strong>
+
+        <div class="news">
+		
+		   <div class="new new1">
+		      <img src="images/img2.jpg">
+			  <div class="data">
+			     <img src="images/calendar.jpg">
+				 <span>12.07.15</span>
+			  </div>
+			  <strong>
+			      MRS appoints Wisam Farjow Vice
+                  President Engineering!
+			  </strong>
+			  <p>Mine Radio Systems (MRS); Global designer and manufacturer of communication systems to...</p>
+			  <a href="#">More</a>
+			  <div class="line2"></div>
+		   </div>
+		   
+		   <div class="new new2">
+		      <img src="images/img3.jpg">
+			  <div class="data">
+			     <img src="images/calendar.jpg">
+				 <span>12.07.15</span>
+			  </div>
+			  <strong>
+			      MRS appoints Wisam Farjow Vice
+                  President Engineering!
+			  </strong>
+			  <p>Mine Radio Systems (MRS); Global designer and manufacturer of communication systems to...</p>
+			  <a href="#">More</a>
+			  <div class="line2"></div>
+		   </div>
+		   
+		   <div class="new new3">
+		      <img src="images/img1.jpg">
+			  <div class="data">
+			     <img src="images/calendar.jpg">
+				 <span>12.07.15</span>
+			  </div>
+			  <strong>
+			      MRS appoints Wisam Farjow Vice
+                  President Engineering!
+			  </strong>
+			  <p>Mine Radio Systems (MRS); Global designer and manufacturer of communication systems to...</p>
+			  <a href="#">More</a>
+			  <div class="line2"></div>
+		   </div>
+		   
+		   <div class="new new1">
+		      <img src="images/img2.jpg">
+			  <div class="data">
+			     <img src="images/calendar.jpg">
+				 <span>12.07.15</span>
+			  </div>
+			  <strong>
+			      MRS appoints Wisam Farjow Vice
+                  President Engineering!
+			  </strong>
+			  <p>Mine Radio Systems (MRS); Global designer and manufacturer of communication systems to...</p>
+			  <a href="#">More</a>
+			  <div class="line2"></div>
+		   </div>
+		   
+		   <div class="new new2">
+		      <img src="images/img1.jpg">
+			  <div class="data">
+			     <img src="images/calendar.jpg">
+				 <span>12.07.15</span>
+			  </div>
+			  <strong>
+			      MRS appoints Wisam Farjow Vice
+                  President Engineering!
+			  </strong>
+			  <p>Mine Radio Systems (MRS); Global designer and manufacturer of communication systems to...</p>
+			  <a href="#">More</a>
+			  <div class="line2"></div>
+		   </div>
+		   
+		   <div class="new new3">
+		      <img src="images/img3.jpg">
+			  <div class="data">
+			     <img src="images/calendar.jpg">
+				 <span>12.07.15</span>
+			  </div>
+			  <strong>
+			      MRS appoints Wisam Farjow Vice
+                  President Engineering!
+			  </strong>
+			  <p>Mine Radio Systems (MRS); Global designer and manufacturer of communication systems to...</p>
+			  <a href="#">More</a>
+			  <div class="line2"></div>
+		   </div>
+		   
+		</div>	<!--end news-->	
+		
+	  </div>   <!--end left-column-->
+	  
+	          <!--right-column-->
+	  
+	  <div class="right-column">
+	  
+	     <div class="latest">
+		    <strong>Latest ABMEC Events</strong>
+			<p>Becoming a member will give access all global events to help plan promotion and better market your company.</p>			
+		 </div>
+		 
+		 <div class="calendar">
+		   <div id="div3_example"></div>
+		 </div>
+		 
+		 <div class="right_map">
+		    <img src="images/banner.png">
+		 </div>
+		 
+		 <div class="forma2">
+		    <p>Welcome to the ABMEC Buyers Guide – find out more about any member company and their products or services by selecting below.</p>
+			<form class="company_product">
+			   <select>
+			      <option class="first_position">Select a company</option>
+			      <option value="1">1</option>
+				  <option value="2">2</option>
+				  <option value="3">3</option>
+			   </select>
+			      <br>
+			   <select>
+			      <option class="first_position">Select a product</option>
+			      <option value="1">1</option>
+				  <option value="2">2</option>
+				  <option value="3">3</option>
+			   </select>
+			</form>
+		 </div>
+		 
+		 <div class="logoblock">
+		    <div class="logo logo1"><a href="#"><img src="images/logo1.png"></a></div>
+			<div class="logo logo2"><a href="#"><img src="images/logo2.png"></a></div>
+			<div class="logo logo3"><a href="#"><img src="images/logo3.png"></a></div>
+			<div class="logo logo4"><a href="#"><img src="images/logo4.png"></a></div>
+			<div class="logo logo5"><a href="#"><img src="images/logo5.png"></a></div>
+			<div class="logo logo6"><a href="#"><img src="images/logo6.png"></a></div>
+			<div class="logo logo7"><a href="#"><img src="images/logo7.png"></a></div>
+			<div class="logo logo8"><a href="#"><img src="images/logo8.png"></a></div>
+			<div class="logo logo11"><a href="#"><img src="images/logo11.png"></a></div>
+			<div class="logo logo12"><a href="#"><img src="images/logo12.png"></a></div>
+			<div class="logo logo13"><a href="#"><img src="images/logo13.png"></a></div>
+			<div class="logo logo9"><a href="#"><img src="images/logo9.png"></a></div>
+			<div class="logo logo10"><a href="#"><img src="images/logo10.png"></a></div>
+			<div class="logotext">
+			<p>Click on logo to select a company</p>
+			</div>
+		 </div>
+		 
+   
+         </div>
+	
+	
+	
+	</div>
+	
+	<div class="footer">
+	<div class="footer_block">
+	   <ul>
+	      <li><a href="#">Home</a>  |
+	      <li><a href="#">About ABMEC</a>  |
+	      <li><a href="#">Members</a>  |
+		  <li><a href="#">News</a>  |
+		  <li><a href="#">Contact us</a>  |
+		  <li><a href="#">Add link</a>  
+	   </ul>
+	   <span class="copyright">© 2011 ABMEC.CO.UK</span>
+	   <img src="images/end_logo.png">
+	</div>
+	</div>
+	
+	<div class="psfooter">
+	  
+	   <img src="images/pslogo.png">
+	   
+	</div>
+	
+	<script type="text/javascript">
+			$(function() {
+			
+				$( '#jms-slideshow' ).jmslideshow();
+				
+			});
+	</script>
+   
+</body>
+
+</html>
